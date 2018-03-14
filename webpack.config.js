@@ -24,11 +24,23 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                      { loader: 'style-loader'},
+                        { loader: 'css-loader',
+                            options: {
+                                modules: true,
+                                  localIdentName: '[name]__[local]__[hash:base64:5]'
+                            }
+                        },
+                ]
             }
         ],
-
 /*
-        loaders: [{
+{
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
