@@ -7,4 +7,12 @@
 `npm install webpack webpack-dev-server --save-dev`
 
 
+## How it works
+
+1. Entry Point: Webpack has at least 1 entry point e.g. `app.js`
+2. Loaders: Loaders are used to do file type dependent transformation
+3. Pluging: Webpack has global plugins e.g. `uglify`
+4. Output: Concatenates the output correctly.
+
+
 
