@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class Users extends Component {
-    render() {
+    render () {
         return (
             <div>
-                <h1>The Usrs</h1>
-                <p>Awesome users.</p>
+                <h1>The Users</h1>
+                <p>Awesome users on board of this course!</p>
             </div>
-        )
+        );
     }
 }
 
-export default Users
+export default Users;
