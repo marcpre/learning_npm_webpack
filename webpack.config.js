@@ -16,11 +16,10 @@ module.exports = {
         publicPath: ''
     },
     resolve: {
-      extensions: ['.js', '.jsx']  
+        extensions: ['.js', '.jsx']
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
@@ -29,28 +28,34 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
-                      { loader: 'style-loader'},
-                        { loader: 'css-loader',
-                            options: {
-                                modules: true,
-                                  localIdentName: '[name]__[local]__[hash:base64:5]'
-                            }
-                        },
+                    { loader: 'style-loader' },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[name]__[local]__[hash:base64:5]'
+                        }
+                    },
+                    {
+                        test: /\.(png|jpe?g|gif)$/,
+                        loader: 'url-loader?limit=8000&name=images/[name].[ext]'
+                    }
                 ]
             }
         ],
-/*
-{
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            },
-            {
-                test: /\.jsx$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            }
-        ]
-*/    },
+        /*
+        {
+                        test: /\.js$/,
+                        loader: 'babel-loader',
+                        exclude: /node_modules/
+                    },
+                    {
+                        test: /\.jsx$/,
+                        loader: 'babel-loader',
+                        exclude: /node_modules/
+                    }
+                ]
+        */
+    },
     plugins: [HtmlWebpackPluginConfig]
 }
