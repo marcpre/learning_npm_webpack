@@ -97,6 +97,11 @@ if (process.env.NODE_ENV === 'production') {
 [Using SourceMaps in VueJS](https://medium.com/@BjornKrols/a-basic-introduction-to-debugging-vue-applications-using-breakpoints-2ef76ce419f2)
 
 
+## Where can the sourcemap be found?
+
+![Source Map](https://imgur.com/a/nhH5eFq)
+
+
 
 Course stopped at:
 --> finished at 362
